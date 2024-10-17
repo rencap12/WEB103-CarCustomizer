@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { useState } from 'react';
-import { createCar } from '../services/CarsAPI';
+import { addCar } from '../services/CarsAPI';
 import { useNavigate } from 'react-router-dom';
 
 const CreateCar = () => {

@@ -1,4 +1,4 @@
-import pool from '../config/database.js';
+import  pool from '../config/database.js';
 
 // Get all custom items
 export const getCustomItems = async (req, res) => {
@@ -24,18 +24,42 @@ export const addCustomItem = async (req, res) => {
   }
 };
 
-// Update a custom item
+// Get all feature options
+export const getFeatureOptions = async (req, res) => {
+  try {
+    const [exteriorColors] = await pool.query('SELECT * FROM ExteriorColor');
+    const [interiorColors] = await pool.query('SELECT * FROM InteriorColor');
+    const [wheels] = await pool.query('SELECT * FROM Wheels');
+    const [tinted] = await pool.query('SELECT * FROM Tinted');
+    
+    res.json({
+      exteriorColors,
+      interiorColors,
+      wheels,
+      tinted
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Failed to fetch feature options');
+  }
+};
+
+// Update car with new features
 export const updateCustomItem = async (req, res) => {
   const { id } = req.params;
-  const { name, features, price } = req.body;
+  const { name, features, price, img_url } = req.body;
+  
+  const query = `
+    UPDATE CustomItem 
+    SET name = $1, features = $2, price = $3, img_url = $4
+    WHERE id = $5
+  `;
   try {
-    const { rows } = await pool.query(
-      'UPDATE CustomItem SET name=$1, features=$2, price=$3 WHERE id=$4 RETURNING *',
-      [name, features, price, id]
-    );
-    res.json(rows[0]);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    await pool.query(query, [name, features, price, img_url, id]);
+    res.status(200).send('Car updated successfully');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Failed to update car');
   }
 };
 

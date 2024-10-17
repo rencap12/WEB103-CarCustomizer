@@ -31,15 +31,17 @@ const ViewCar = () => {
   return (
     <div>
       <h1>All Cars</h1>
-      {cars.map(car => (
-        <div key={car.id}>
-          <h2>{car.name}</h2>
-          <p>Price: {car.price}</p>
-          <Link to={`/cars/${car.id}`}>Details</Link>
-          <Link to={`/cars/edit/${car.id}`}>Edit</Link>
-          <button onClick={() => handleDelete(car.id)}>Delete</button>
-        </div>
+      <div className='card-container'>
+        {cars.map(car => (
+          <div key={car.id} className='card'>
+            <h2>{car.name}</h2>
+            <p>Price: ${car.price}</p>
+            <Link to={`/cars/${car.id}`}>Details</Link>
+            <Link to={`/cars/edit/${car.id}`}>Edit</Link>
+            <button onClick={() => handleDelete(car.id)}>Delete</button>
+          </div>
       ))}
+      </div>
     </div>
   );
 };
