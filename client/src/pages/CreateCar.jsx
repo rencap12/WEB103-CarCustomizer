@@ -14,8 +14,9 @@ const CreateCar = () => {
     e.preventDefault();
     const carData = { name, features, price };
     try {
-      await createCar(carData);
-      navigate('/cars'); // Redirect to car list after creation
+      await addCar(carData);
+      alert('Car Created!');
+      //navigate('/cars'); // Redirect to car list after creation
     } catch (error) {
       console.error("Failed to create car:", error);
     }

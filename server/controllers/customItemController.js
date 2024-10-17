@@ -73,7 +73,7 @@ export const getFeatureOptions = async (req, res) => {
 // Update car with new features
 export const updateCustomItem = async (req, res) => {
   const { id } = req.params;
-  const { name, features, price, img_url } = req.body;
+  const { name, features, price } = req.body;
   
   const query = `
     UPDATE CustomItem 
