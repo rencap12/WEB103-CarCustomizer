@@ -22,8 +22,12 @@ const App = () => {
       element: <CarDetails title='BOLT BUCKET | View' />
     },
     {
-      path: '/edit/:id',
+      path: 'cars/edit/:id',
       element: <EditCar title='BOLT BUCKET | Edit' />
+    },
+    {
+      path: 'cars/:id',
+      element: <EditCar title='BOLT BUCKET | Car' />
     }
   ])
 
