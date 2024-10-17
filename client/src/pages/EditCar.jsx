@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getFeatureOptions, updateCar, getCar, deleteCar } from '../services/CarsAPI'; // Add deleteCar import
+import { updateCarFeatures, getFeatureOptions, updateCar, getCar, deleteCar } from '../services/CarsAPI'; // Add deleteCar import
 
 const EditCar = () => {
   const { id } = useParams();
@@ -62,7 +62,7 @@ const EditCar = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await updateCar(id, { ...car, features: selectedFeatures });
+      await updateCarFeatures(id, { ...car, features: selectedFeatures });
       alert('Car updated successfully!');
     } catch (error) {
       console.error('Failed to update car:', error);
