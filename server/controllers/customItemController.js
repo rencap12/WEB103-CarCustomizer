@@ -50,6 +50,8 @@ export const getFeatureOptions = async (req, res) => {
     const wheels = wheelsQuery.rows || [];
     const tints = tintsQuery.rows || [];
 
+
+
     // Check if any of the queries returned undefined or null
     if (!Array.isArray(exteriorColors) || !Array.isArray(interiorColors) || !Array.isArray(wheels) || !Array.isArray(tints)) {
       throw new Error('Failed to fetch feature options.');
