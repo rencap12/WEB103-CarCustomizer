@@ -12,7 +12,7 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 - [x] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomCar` table**
-  - [ ] **NOTE: Your GIF must include a view of your Railway database that shows the contents of the table used by your app**
+  - [x] **NOTE: Your GIF must include a view of your Railway database that shows the contents of the table used by your app**
 - [x] **The web app uses React to display data from the API**
 - [x] **Users can view a list of options they can select for different aspects of a `CustomCar`**
 - [x] **On selecting each option, the displayed visual icon for the `CustomCar` updates to match the option the user chose**
@@ -20,7 +20,7 @@ The following **required** functionality is completed:
 - [x] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database**
 - [x] **The app displays the total price of all features**
 - [x] **Users can view a list of all submitted `CustomCar`**
-- [ ] **Users can edit or delete a submitted `CustomCar` from the list view of submitted `CustomCar`**
+- [x] **Users can edit or delete a submitted `CustomCar` from the list view of submitted `CustomCar`**
 - [x] **Users can update or delete `CustomCar` that have been created from the detail page**
 
 The following **optional** features are implemented:
@@ -31,15 +31,18 @@ The following **additional** features are implemented:
 
 - [x] List anything else that you added to improve the site's functionality!
       - more routes and controller functions
+![Screenshot 2024-10-17 004748](https://github.com/user-attachments/assets/1d165f6f-6de4-4e16-afc3-18ff6bd5c92d)
+![Screenshot 2024-10-17 004732](https://github.com/user-attachments/assets/2c0666c5-b4fb-418f-839a-9e4ace4e38ec)
+![Screenshot 2024-10-17 004555](https://github.com/user-attachments/assets/e4ea9e8f-bafc-46fe-bdcc-68cad3e37291)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2xteGhhcGlpaDJ4d2tqYW04dDZocXlyNjZpdmdjbWJxYTIzZHBvNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VKE3oLO4dEOdaexnii/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
+GIF created with ...  LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
