@@ -50,6 +50,7 @@ GIF created with ...  GIF tool here
 Describe any challenges encountered while building the app or any additional context you'd like to add.
 - Had to get comfortable with starter code
 - Understand layering of sending requests and their reception
+- Debugging
 
 ## License
 
